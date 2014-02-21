@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
   has_many :orders, -> { order "order_num" }
-  # scope :made_a_purchase_during_week, -> (week_since_signup) { where("created_at < ?", time) }
 
   def self.find_cohort(signup_date, range=1.week)
     start_date = signup_date.beginning_of_day

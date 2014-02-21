@@ -39,6 +39,8 @@ class Gaggle < Hashie::Dash
       self.users.select{|u| u.placed_order_during_week?(week_num)}
     end
 
+    # Retrieves the users who made their first purchase during their
+    # Xth week of membership. Indexing starts at 0.
     def first_time_purchasers_during_week(week_num)
       self.users.select{|u| u.placed_order_during_week?(week_num, first_order_only: true)}
     end
