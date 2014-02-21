@@ -52,7 +52,7 @@ gem 'actionpack-action_caching', '~> 1.1.0'
 gem 'rack-cache'
 gem 'dalli'
 gem 'kgio'
-gem "memcachier"
+#gem "memcachier"
 
 group :development do
   gem 'pry'
