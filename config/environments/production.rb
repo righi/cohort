@@ -17,7 +17,11 @@ Cohort::Application.configure do
   #}
   #config.static_cache_control = "public, max-age=2592000"
   #config.cache_store = :dalli_store, nil, { :namespace => "warm-sands-2072", :expires_in => 1.day, :compress => true }
-  config.cache_store = :dalli_store
+  #config.cache_store = :dalli_store
+
+  if ENV["MEMCACHEDCLOUD_SERVERS"]
+    config.cache_store = :dalli_store, ENV["MEMCACHEDCLOUD_SERVERS"].split(','), { :username => ENV["MEMCACHEDCLOUD_USERNAME"], :password => ENV["MEMCACHEDCLOUD_PASSWORD"] }
+  end
 
 
 

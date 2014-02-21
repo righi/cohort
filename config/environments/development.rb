@@ -6,6 +6,8 @@ Cohort::Application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  config.cache_store = :memory_store, { size: 64.megabytes }
+
   # Do not eager load code on boot.
   config.eager_load = false
 
