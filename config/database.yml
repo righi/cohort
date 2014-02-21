@@ -52,9 +52,11 @@ test:
   password:
 
 production:
+  host: ec2-23-23-177-33.compute-1.amazonaws.com
+  port: 5432
   adapter: postgresql
   encoding: unicode
-  database: cohort_production
+  database: d4uj7c12l8ocmo
   pool: 5
-  username: mrighi
-  password:
+  username: yfchaybrwqgfux
+  password: 5P8YCC9oaA2Sf0Y3aQHXSMggts
