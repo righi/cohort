@@ -16,6 +16,8 @@ Cohort::Application.configure do
       :entitystore  => client
   }
   config.static_cache_control = "public, max-age=2592000"
+  config.cache_store = :dalli_store, nil, { :namespace => "warm-sands-2072", :expires_in => 1.day, :compress => true }
+
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both thread web servers
