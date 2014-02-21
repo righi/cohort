@@ -49,6 +49,10 @@ end
 gem "bootstrap-sass", "~> 3.1.1.0"
 gem 'hashie', '2.0.5'
 gem 'actionpack-action_caching', '~> 1.1.0'
+gem 'rack-cache'
+gem 'dalli'
+gem 'kgio'
+gem "memcachier"
 
 group :development do
   gem 'pry'
